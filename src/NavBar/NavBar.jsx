@@ -2,15 +2,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
-    const NavItems = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/about'>About</Link></li>
-        <li><Link to='/skill'>Skills</Link></li>
-        <li><Link to='/projects'>Projects</Link></li>
-        <li><Link to='/contact'>Contact</Link></li>
-       
-    </>
-    return (
+    const NavItems = 
+        <>
+            <li>
+                <Link to="/">Home</Link>
+            </li>
+            <li>
+                <Link className="active:bg-red-400" to="#about">
+                    About
+                </Link>
+            </li>
+            <li>
+                <Link to="#skills">Skills</Link>
+            </li>
+            <li>
+                <Link to="#projects">Projects</Link>
+            </li>
+            
+            <li>
+                <Link to="#contacts">Contacts</Link>
+            </li>
+
+
+        </>
+        
+        return (
         <div className="navbar bg-base-100 h-28 mb-4">
             <div className="navbar-start">
                 <div className="dropdown">
@@ -22,7 +38,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case text-xl">
-                   
+
                     <h1 className='text-emerald-800'>Naimun Nahar</h1>
 
 
@@ -38,7 +54,7 @@ const NavBar = () => {
 
 
 
-    );
+        );
 };
 
-export default NavBar;
+        export default NavBar;
